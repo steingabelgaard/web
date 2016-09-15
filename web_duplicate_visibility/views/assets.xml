@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<openerp>
+	<data>
+	
     <template id="assets_backend"
               name="web_duplicate_visibility backend assets"
               inherit_id="web.assets_backend">
@@ -11,14 +13,5 @@
         </xpath>
     </template>
 
-    <template id="qunit_suite"
-              name="web_duplicate_visibility qunit assets"
-              inherit_id="web.qunit_suite">
-        <xpath expr="//html/head"
-               position="inside">
-            <script type="text/javascript"
-                    src="/web_duplicate_visibility/static/test/duplicate_visibility.js">
-            </script>
-        </xpath>
-    </template>
-</odoo>
+    </data>
+</openerp>

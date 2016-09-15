@@ -1,13 +1,9 @@
-odoo.define('web.DuplicateVisibility',function (require) {
+openerp.web_duplicate_visibility = function(instance, local) {
     "use strict";
 
-    var core = require('web.core');
-    var Sidebar = require('web.Sidebar');
-    var FormView = require('web.FormView');
+    var _t = instance.web._t;
 
-    var _t = core._t;
-
-    var DuplicateVisibility = FormView.include({
+    instance.web.FormView.include({
         /**
          * Instantiate and render the sidebar if a sidebar is requested
          * Sets this.sidebar
@@ -32,4 +28,4 @@ odoo.define('web.DuplicateVisibility',function (require) {
         },
     });
 
-});
+};
