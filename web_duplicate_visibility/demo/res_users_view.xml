@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+<openerp>
+	<data>
      <record id="view_users_form" model="ir.ui.view">
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="model">res.users</field>
@@ -9,4 +10,5 @@
             </xpath>
         </field>
      </record>
-</odoo>
+    </data>
+</openerp>
