@@ -85,6 +85,7 @@ odoo.define('web_responsive', function(require) {
                 '-': this.LEFT,
             };
             this.initDrawer();
+            this.handleWindowResize();
             var $clickZones = $('.odoo_webclient_container, ' +
                                 'a.oe_menu_leaf, ' +
                                 'a.oe_menu_toggler, ' +
@@ -108,7 +109,10 @@ odoo.define('web_responsive', function(require) {
                         'transform', 'matrix(1, 0, 0, 1, 0, ' + transform + ')'
                     );
                 };
+                // Scroll probe aggressiveness level
+                // 2 == always executes the scroll event except during momentum and bounce.
                 this.iScroll.options.probeType = 2;
+                // Set options because
                 this.iScroll.on('scroll', $.proxy(onIScroll, this));
             });
             this.initialized = true;

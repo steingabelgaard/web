@@ -20,11 +20,12 @@ addon | version | summary
 --- | --- | ---
 [help_online](help_online/) | 10.0.1.0.0 | Help Online
 [web_access_rule_buttons](web_access_rule_buttons/) | 10.0.1.0.0 | Disable Edit button if access rules prevent this action
-[web_advanced_search_x2x](web_advanced_search_x2x/) | 10.0.2.0.1 | Use a search widget in advanced search for x2x fields
+[web_advanced_search_x2x](web_advanced_search_x2x/) | 10.0.2.0.3 | Use a search widget in advanced search for x2x fields
 [web_chatter_paste](web_chatter_paste/) | 10.0.1.0.0 | Paste images and drop files into the chatter and upload them directly
 [web_confirm_window_close](web_confirm_window_close/) | 10.0.1.0.0 | Check for unsaved data when closing browser window
 [web_decimal_numpad_dot](web_decimal_numpad_dot/) | 10.0.1.1.0 | Allows using numpad dot to enter period decimal separator
-[web_dialog_size](web_dialog_size/) | 10.0.1.0.0 | A module that lets the user expand a dialog box to the full screen width.
+[web_dialog_size](web_dialog_size/) | 10.0.1.0.1 | A module that lets the user expand a dialog box to the full screen width.
+[web_domain_field](web_domain_field/) | 10.0.1.0.0 | Use computed field as domain
 [web_editor_background_color](web_editor_background_color/) | 10.0.1.0.0 | Set any background color for web editor snippets
 [web_environment_ribbon](web_environment_ribbon/) | 10.0.1.0.0 | Web Environment Ribbon
 [web_export_view](web_export_view/) | 10.0.1.0.0 | Web Export Current View
@@ -37,20 +38,23 @@ addon | version | summary
 [web_m2x_options](web_m2x_options/) | 10.0.1.1.0 | web_m2x_options
 [web_no_bubble](web_no_bubble/) | 10.0.1.0.0 | Remove the bubbles from the web interface
 [web_notify](web_notify/) | 10.0.1.0.0 | Send notification messages to user
-[web_responsive](web_responsive/) | 10.0.1.2.0 | It provides a mobile compliant interface for Odoo Community web
+[web_readonly_bypass](web_readonly_bypass/) | 10.0.1.0.1 | Allow to save onchange modifications to readonly fields
+[web_responsive](web_responsive/) | 10.0.1.2.2 | It provides a mobile compliant interface for Odoo Community web
 [web_search_with_and](web_search_with_and/) | 10.0.1.0.0 | Use AND conditions on omnibar search
 [web_searchbar_full_width](web_searchbar_full_width/) | 10.0.1.0.0 | Show search bar in full screen width
 [web_send_message_popup](web_send_message_popup/) | 10.0.1.0.0 | Web Send Message as Popup
 [web_sheet_full_width](web_sheet_full_width/) | 10.0.1.0.1 | Use the whole available screen width when displaying sheets
 [web_shortcut](web_shortcut/) | 10.0.1.0.1 | Shortcut Menu
-[web_timeline](web_timeline/) | 10.0.1.0.0 | Interactive visualization chart to show events in time
+[web_switch_company_warning](web_switch_company_warning/) | 10.0.0.1.0 | Show a warning if current company has been switched in another tab or window.
+[web_timeline](web_timeline/) | 10.0.1.2.1 | Interactive visualization chart to show events in time
 [web_translate_dialog](web_translate_dialog/) | 10.0.1.0.0 | Easy-to-use pop-up to translate fields in several languages
 [web_tree_dynamic_colored_field](web_tree_dynamic_colored_field/) | 10.0.1.0.0 | Allows you to dynamically color fields on tree views
 [web_tree_image](web_tree_image/) | 10.0.1.1.0 | Show images in tree views
 [web_tree_many2one_clickable](web_tree_many2one_clickable/) | 10.0.1.0.0 | Open the linked resource when clicking on their name
 [web_widget_color](web_widget_color/) | 10.0.1.0.0 | Web Widget Color
+[web_widget_darkroom](web_widget_darkroom/) | 10.0.1.0.0 | Provides web widget for image editing and adds it to standard image widget as modal
 [web_widget_digitized_signature](web_widget_digitized_signature/) | 10.0.0.1.0 | Web Widget Digitized Signature
-[web_widget_domain_v11](web_widget_domain_v11/) | 10.0.1.0.0 | Updated domain widget
+[web_widget_domain_v11](web_widget_domain_v11/) | 10.0.1.0.1 | Updated domain widget
 [web_widget_float_formula](web_widget_float_formula/) | 10.0.1.0.0 | Allow use of simple formulas in float fields
 [web_widget_image_download](web_widget_image_download/) | 10.0.1.0.0 | Allows to download any image from its widget
 [web_widget_image_webcam](web_widget_image_webcam/) | 10.0.1.0.0 | Allows to take image with WebCam
@@ -82,11 +86,9 @@ addon | version | summary
 [web_menu_navbar_needaction](web_menu_navbar_needaction/) | 8.0.1.0.0 (unported) | Show the sum of submenus' needaction counters in main menu
 [web_option_auto_color](web_option_auto_color/) | 8.0.0.1.0 (unported) | Web Option Auto Color
 [web_polymorphic_many2one](web_polymorphic_many2one/) | 0.2 (unported) | Web Polymorphic Many2One
-[web_readonly_bypass](web_readonly_bypass/) | 9.0.1.0.0 (unported) | Allow to save onchange modifications to readonly fields
 [web_recipients_uncheck](web_recipients_uncheck/) | 8.0.0.3.0 (unported) | Uncheck recipients on res.partner
 [web_search_alphabetic](web_search_alphabetic/) | 1.0 (unported) | Web Alphabetical Search
 [web_sheet_full_width_selective](web_sheet_full_width_selective/) | 8.0.0.1.0 (unported) | Show selected sheets with full width
-[web_switch_company_warning](web_switch_company_warning/) | 8.0.0.1.0 (unported) | Show a warning if current company has been switched in another tab or window.
 [web_widget_datepicker_options](web_widget_datepicker_options/) | 8.0.1.0.0 (unported) | web_widget_datepicker_options
 [web_widget_text_markdown](web_widget_text_markdown/) | 8.0.1.0.0 (unported) | web_widget_text_markdown
 
