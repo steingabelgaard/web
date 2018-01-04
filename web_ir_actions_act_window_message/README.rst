@@ -13,7 +13,9 @@ Depend on this module and return
     {
         'type': 'ir.actions.act_window.message',
         'title': _('My title'),
+        # Either message rendered with t-esc or html rendered with t-raw
         'message': _('My message'),
+        'html: _('My <b>Bold</b> message'),
         # optional title of the close button, if not set, will be _('Close')
         # if set False, no close button will be shown
         # you can create your own close button with an action of type
