@@ -19,12 +19,15 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [help_online](help_online/) | 10.0.1.0.0 | Help Online
+[support_branding](support_branding/) | 10.0.1.0.0 | Adds your branding to an Odoo instance
 [web_access_rule_buttons](web_access_rule_buttons/) | 10.0.1.0.0 | Disable Edit button if access rules prevent this action
+[web_action_conditionable](web_action_conditionable/) | 10.0.1.0.0 | web_action_conditionable
+[web_advanced_search_wildcard](web_advanced_search_wildcard/) | 10.0.1.0.0 | Webmodule to add wildcard operators in advanced search field
 [web_advanced_search_x2x](web_advanced_search_x2x/) | 10.0.2.0.3 | Use a search widget in advanced search for x2x fields
 [web_chatter_paste](web_chatter_paste/) | 10.0.1.0.0 | Paste images and drop files into the chatter and upload them directly
 [web_confirm_window_close](web_confirm_window_close/) | 10.0.1.0.0 | Check for unsaved data when closing browser window
 [web_decimal_numpad_dot](web_decimal_numpad_dot/) | 10.0.1.1.0 | Allows using numpad dot to enter period decimal separator
-[web_dialog_size](web_dialog_size/) | 10.0.1.0.1 | A module that lets the user expand a dialog box to the full screen width.
+[web_dialog_size](web_dialog_size/) | 10.0.1.0.2 | A module that lets the user expand a dialog box to the full screen width.
 [web_domain_field](web_domain_field/) | 10.0.1.0.0 | Use computed field as domain
 [web_editor_background_color](web_editor_background_color/) | 10.0.1.0.0 | Set any background color for web editor snippets
 [web_environment_ribbon](web_environment_ribbon/) | 10.0.1.0.0 | Web Environment Ribbon
@@ -39,7 +42,7 @@ addon | version | summary
 [web_no_bubble](web_no_bubble/) | 10.0.1.0.0 | Remove the bubbles from the web interface
 [web_notify](web_notify/) | 10.0.1.0.0 | Send notification messages to user
 [web_readonly_bypass](web_readonly_bypass/) | 10.0.1.0.1 | Allow to save onchange modifications to readonly fields
-[web_responsive](web_responsive/) | 10.0.1.2.2 | It provides a mobile compliant interface for Odoo Community web
+[web_responsive](web_responsive/) | 10.0.1.2.3 | It provides a mobile compliant interface for Odoo Community web
 [web_search_with_and](web_search_with_and/) | 10.0.1.0.0 | Use AND conditions on omnibar search
 [web_searchbar_full_width](web_searchbar_full_width/) | 10.0.1.0.0 | Show search bar in full screen width
 [web_send_message_popup](web_send_message_popup/) | 10.0.1.0.0 | Web Send Message as Popup
@@ -47,10 +50,11 @@ addon | version | summary
 [web_shortcut](web_shortcut/) | 10.0.1.0.1 | Shortcut Menu
 [web_switch_company_warning](web_switch_company_warning/) | 10.0.0.1.0 | Show a warning if current company has been switched in another tab or window.
 [web_timeline](web_timeline/) | 10.0.1.2.1 | Interactive visualization chart to show events in time
-[web_translate_dialog](web_translate_dialog/) | 10.0.1.0.0 | Easy-to-use pop-up to translate fields in several languages
+[web_translate_dialog](web_translate_dialog/) | 10.0.1.0.1 | Easy-to-use pop-up to translate fields in several languages
 [web_tree_dynamic_colored_field](web_tree_dynamic_colored_field/) | 10.0.1.0.0 | Allows you to dynamically color fields on tree views
 [web_tree_image](web_tree_image/) | 10.0.1.1.0 | Show images in tree views
 [web_tree_many2one_clickable](web_tree_many2one_clickable/) | 10.0.1.0.0 | Open the linked resource when clicking on their name
+[web_widget_bokeh_chart](web_widget_bokeh_chart/) | 10.0.1.0.0 | This widget allows to display charts using Bokeh library.
 [web_widget_color](web_widget_color/) | 10.0.1.0.0 | Web Widget Color
 [web_widget_darkroom](web_widget_darkroom/) | 10.0.1.0.0 | Provides web widget for image editing and adds it to standard image widget as modal
 [web_widget_digitized_signature](web_widget_digitized_signature/) | 10.0.0.1.0 | Web Widget Digitized Signature
@@ -60,7 +64,9 @@ addon | version | summary
 [web_widget_image_webcam](web_widget_image_webcam/) | 10.0.1.0.0 | Allows to take image with WebCam
 [web_widget_many2many_tags_multi_selection](web_widget_many2many_tags_multi_selection/) | 10.0.1.0.0 | Tags multiple selection
 [web_widget_slick](web_widget_slick/) | 10.0.1.0.0 | Adds SlickJS slider widget for use as a carousel on Many2one attachment fields in backend form views.
-[web_widget_slick_example](web_widget_slick_example/) | 10.0.1.0.0 | Example usage of the web_widget_slick module
+[web_widget_slick_example](web_widget_slick_example/) | 10.0.1.0.0 | Example usage of the web_widget_slick and web_widget_slickroom modules
+[web_widget_slickroom](web_widget_slickroom/) | 10.0.1.0.0 | Provides Slick Carousel Widget with DarkroomJS image editing
+[web_widget_text_markdown](web_widget_text_markdown/) | 10.0.1.0.0 | web_widget_text_markdown
 [web_widget_timepicker](web_widget_timepicker/) | 10.0.1.0.0 | Web Timepicker Widget
 [web_widget_x2many_2d_matrix](web_widget_x2many_2d_matrix/) | 10.0.1.0.1 | Show list fields as a matrix
 [web_x2many_delete_all](web_x2many_delete_all/) | 10.0.1.0.0 | Adds a button to x2many fields that removes all linked records
@@ -71,8 +77,6 @@ Unported addons
 addon | version | summary
 --- | --- | ---
 [help_popup](help_popup/) | 8.0.0.5.0 (unported) | Help Popup
-[support_branding](support_branding/) | 8.0.2.0.0 (unported) | Adds your branding to an Odoo instance
-[web_action_conditionable](web_action_conditionable/) | 8.0.0.1.0 (unported) | web_action_conditionable
 [web_ckeditor4](web_ckeditor4/) | 8.0.1.0.0 (unported) | Provides a widget for editing HTML fields using CKEditor 4.x
 [web_context_in_colors](web_context_in_colors/) | 8.0.1.1.0 (unported) | Use the context in a tree view's colors and fonts attribute
 [web_dashboard_open_action](web_dashboard_open_action/) | 8.0.1.0.0 (unported) | Adds a button to open a dashboard in full mode
@@ -82,7 +86,6 @@ addon | version | summary
 [web_graph_improved](web_graph_improved/) | 8.0.0.1.0 (unported) | Improves graph views.
 [web_group_expand](web_group_expand/) | 8.0.1.0.0 (unported) | Group Expand Buttons
 [web_last_viewed_records](web_last_viewed_records/) | 8.0.1.0.0 (unported) | Last viewed records
-[web_listview_custom_element_number](web_listview_custom_element_number/) | 8.0.1.0.0 (unported) | Allow users to set manually a quantity of items to display in a tree view
 [web_menu_navbar_needaction](web_menu_navbar_needaction/) | 8.0.1.0.0 (unported) | Show the sum of submenus' needaction counters in main menu
 [web_option_auto_color](web_option_auto_color/) | 8.0.0.1.0 (unported) | Web Option Auto Color
 [web_polymorphic_many2one](web_polymorphic_many2one/) | 0.2 (unported) | Web Polymorphic Many2One
@@ -90,6 +93,5 @@ addon | version | summary
 [web_search_alphabetic](web_search_alphabetic/) | 1.0 (unported) | Web Alphabetical Search
 [web_sheet_full_width_selective](web_sheet_full_width_selective/) | 8.0.0.1.0 (unported) | Show selected sheets with full width
 [web_widget_datepicker_options](web_widget_datepicker_options/) | 8.0.1.0.0 (unported) | web_widget_datepicker_options
-[web_widget_text_markdown](web_widget_text_markdown/) | 8.0.1.0.0 (unported) | web_widget_text_markdown
 
 [//]: # (end addons)
