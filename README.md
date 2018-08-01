@@ -29,6 +29,7 @@ addon | version | summary
 [web_decimal_numpad_dot](web_decimal_numpad_dot/) | 10.0.1.1.0 | Allows using numpad dot to enter period decimal separator
 [web_dialog_size](web_dialog_size/) | 10.0.1.0.2 | A module that lets the user expand a dialog box to the full screen width.
 [web_domain_field](web_domain_field/) | 10.0.1.0.0 | Use computed field as domain
+[web_drop_target](web_drop_target/) | 10.0.1.0.0 | Allows to drag files into Odoo
 [web_editor_background_color](web_editor_background_color/) | 10.0.1.0.0 | Set any background color for web editor snippets
 [web_environment_ribbon](web_environment_ribbon/) | 10.0.1.0.0 | Web Environment Ribbon
 [web_export_view](web_export_view/) | 10.0.1.0.0 | Web Export Current View
@@ -40,7 +41,7 @@ addon | version | summary
 [web_listview_range_select](web_listview_range_select/) | 10.0.1.0.0 | Enables selecting a range of records using the shift key
 [web_m2x_options](web_m2x_options/) | 10.0.1.1.1 | web_m2x_options
 [web_no_bubble](web_no_bubble/) | 10.0.1.0.0 | Remove the bubbles from the web interface
-[web_notify](web_notify/) | 10.0.1.0.0 | Send notification messages to user
+[web_notify](web_notify/) | 10.0.1.1.0 | Send notification messages to user
 [web_readonly_bypass](web_readonly_bypass/) | 10.0.1.0.1 | Allow to save onchange modifications to readonly fields
 [web_responsive](web_responsive/) | 10.0.1.2.3 | It provides a mobile compliant interface for Odoo Community web
 [web_search_with_and](web_search_with_and/) | 10.0.1.0.0 | Use AND conditions on omnibar search
