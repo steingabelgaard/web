@@ -48,6 +48,7 @@ addon | version | summary
 [web_ir_actions_act_window_page](web_ir_actions_act_window_page/) | 8.0.1.0.0 | Allows a developer to trigger a pager to show the previous or next next record in the form view
 [web_last_viewed_records](web_last_viewed_records/) | 8.0.1.0.0 | Last viewed records
 [web_list_html_widget](web_list_html_widget/) | 8.0.1.0.0 | This module allows to use a widget='html' for fields in list (tree) views
+[web_listview_custom_column](web_listview_custom_column/) | 8.0.1.0.0 | Remove or add columns to list views
 [web_listview_custom_element_number](web_listview_custom_element_number/) | 8.0.1.0.0 | Allow users to set manually a quantity of items to display in a tree view
 [web_listview_show_advanced_search](web_listview_show_advanced_search/) | 8.0.1.0.0 | Web Show Advanced Search by default on list view
 [web_m2x_options](web_m2x_options/) | 8.0.0.2.0 | web_m2x_options
@@ -85,6 +86,7 @@ addon | version | summary
 [web_widget_pattern](web_widget_pattern/) | 8.0.1.0.0 | Enforce a pattern on an input field
 [web_widget_radio_tree](web_widget_radio_tree/) | 8.0.1.0.0 | Add radio buttons for records in tree.
 [web_widget_text_markdown](web_widget_text_markdown/) | 8.0.1.0.0 | web_widget_text_markdown
+[web_widget_url_listview](web_widget_url_listview/) | 8.0.1.0.0 | Web Widget ListView Url
 [web_widget_x2many_2d_matrix](web_widget_x2many_2d_matrix/) | 8.0.1.1.0 | Show list fields as a matrix
 [web_x2m_defaults_from_previous](web_x2m_defaults_from_previous/) | 8.0.1.0.0 | Use previous input as default for next line
 [web_x2m_filter](web_x2m_filter/) | 8.0.1.0.0 | Allows to define filters in x2many list fields
