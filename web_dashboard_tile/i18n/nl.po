@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * web_dashboard_tile
-# 
+#
 # Translators:
 # Antonio Trueba, 2016
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2015
@@ -13,15 +13,15 @@
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
 # jeon <bluerespect@nate.com>, 2014
 # Jong-Dae Park <jdpark7@gmail.com>, 2013,2015
-# Kevin Min <gr326887@graded.br>, 2015
+# Gu Hong Min <placidmoon1@gmail.com>, 2015
 # Kunwoo Kim <crazyabtmath@naver.com>, 2015
 # LEE SI HYEONG <super2451894@gmail.com>, 2014
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
-# Pedro Castro Silva <pedrocs@sossia.pt>, 2015
+# Pedro Castro Silva <inactive+pcs.sossia@transifex.com>, 2015
 # Rudolf Schnapka <rs@techno-flex.de>, 2016
-# SaFi J. <safi2266@gmail.com>, 2015
+# Mustafa J. Kadhem <safi2266@gmail.com>, 2015
 # Sam Ryoo <samryoo@gmail.com>, 2014
-# Seo. Junmin <sof.midnight@live.co.kr>, 2015
+# Seo. Junmin <inactive+trans_alice@transifex.com>, 2015
 # seungil <luck8778@gmail.com>, 2014
 # SEUNGWON <baeksw0620@gmail.com>, 2014
 # yterrettaz, 2015
@@ -30,14 +30,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: web (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-07 08:33+0000\n"
-"PO-Revision-Date: 2017-01-13 09:28+0000\n"
+"POT-Creation-Date: 2018-01-16 08:57+0000\n"
+"PO-Revision-Date: 2017-11-23 23:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Dutch (http://www.transifex.com/oca/OCA-web-8-0/language/nl/)\n"
+"Language-Team: Dutch (http://www.transifex.com/oca/OCA-web-8-0/language/"
+"nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: web_dashboard_tile
@@ -241,7 +242,7 @@ msgstr ""
 #. module: web_dashboard_tile
 #: field:tile.tile,model_id:0
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 #. module: web_dashboard_tile
 #: field:tile.tile,name:0
@@ -255,7 +256,7 @@ msgid "Number of records"
 msgstr ""
 
 #. module: web_dashboard_tile
-#: code:addons/web_dashboard_tile/models/tile_tile.py:239
+#: code:addons/web_dashboard_tile/models/tile_tile.py:235
 #, python-format
 msgid "Please select a field from the selected model."
 msgstr ""
@@ -337,7 +338,7 @@ msgid "Total value of '%s'"
 msgstr ""
 
 #. module: web_dashboard_tile
-#: code:addons/web_dashboard_tile/models/tile_tile.py:215
+#: code:addons/web_dashboard_tile/models/tile_tile.py:211
 #, python-format
 msgid "Unimplemented Feature. Search on Active field disabled."
 msgstr ""

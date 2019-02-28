@@ -1,5 +1,5 @@
 <templates>
     <div t-name="web_ir_actions_act_window_message">
-        <div><t t-esc="action.message" /></div>
+        <div><t t-esc="action.message" /><t t-raw="action.html" /></div>
     </div>
 </templates>
