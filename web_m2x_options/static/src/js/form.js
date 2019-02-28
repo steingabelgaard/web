@@ -78,6 +78,7 @@ openerp.web_m2x_options = function (instance) {
             }
 
             // add options search_more to force enable or disable search_more button
+	    this.search_more = this.options.search_more;
             if (this.is_option_set(this.options.search_more) || _.isUndefined(this.options.search_more) && this.is_option_set(self.view.ir_options['web_m2x_options.search_more'])) {
                 this.search_more = true
             }
@@ -161,7 +162,7 @@ openerp.web_m2x_options = function (instance) {
 
                 // search more... if more results that max
 
-                if (values.length > self.limit || self.search_more) {
+                if (self.search_more || (self.search_more !== false && values.length > self.limit)) {
                     values = values.slice(0, self.limit);
                     values.push({
                         label: _t("Search More..."),
