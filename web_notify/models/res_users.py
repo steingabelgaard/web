@@ -25,13 +25,14 @@ class ResUsers(models.Model):
         compute='_compute_channel_names')
 
     @api.multi
-    def notify_info(self, message, title=None, sticky=False,
+    def notify_info(self, message, title=None, sticky=False, commit=False,
                     show_reload=False, action=None,
                     action_link_name=None, **options):
         title = title or _('Information')
         self._notify_channel(
             'notify_info_channel_name', message, title,
-            sticky=sticky, show_reload=show_reload, action=action,
+            sticky=sticky, commit=commit,
+            show_reload=show_reload, action=action,
             action_link_name=action_link_name, **options
         )
 
@@ -42,12 +43,13 @@ class ResUsers(models.Model):
         title = title or _('Warning')
         self._notify_channel(
             'notify_warning_channel_name', message, title,
-            sticky=sticky, show_reload=show_reload, action=action,
+            sticky=sticky, commit=commit,
+            show_reload=show_reload, action=action,
             action_link_name=action_link_name, **options
         )
 
     @api.multi
-    def _notify_channel(self, channel_name_field, message, title, **options):
+    def _notify_channel(self, channel_name_field, message, title, commit=False, **options):
         if (self.env.uid != SUPERUSER_ID
                 and any(user.id != self.env.uid for user in self)):
             raise exceptions.UserError(
@@ -62,4 +64,13 @@ class ResUsers(models.Model):
         bus_message.update(options)
         notifications = [(getattr(record, channel_name_field), bus_message)
                          for record in self]
-        self.env['bus.bus'].sendmany(notifications)
+        if commit:
+            with odoo.api.Environment.manage():
+                with odoo.registry(self.env.cr.dbname).cursor() as new_cr:
+                    new_env = api.Environment(new_cr, self.env.uid,
+                                              self.env.context)
+                    self.env['bus.bus'].with_env(new_env).sendmany(
+                        notifications)
+                    new_env.cr.commit()
+        else:
+            self.env['bus.bus'].sendmany(notifications)
