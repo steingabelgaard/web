@@ -44,12 +44,18 @@ msgid "Reload current view"
 msgstr ""
 
 #. module: web_notify
+#: code:addons/web_notify/models/res_users.py:56
+#, python-format
+msgid "Sending a notification to another user is forbidden."
+msgstr ""
+
+#. module: web_notify
 #: model:ir.model,name:web_notify.model_res_users
 msgid "Users"
 msgstr ""
 
 #. module: web_notify
-#: code:addons/web_notify/models/res_users.py:42
+#: code:addons/web_notify/models/res_users.py:43
 #, python-format
 msgid "Warning"
 msgstr ""
