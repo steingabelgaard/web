@@ -37,7 +37,7 @@ class ResUsers(models.Model):
         )
 
     @api.multi
-    def notify_warning(self, message, title=None, sticky=False,
+    def notify_warning(self, message, title=None, sticky=False, commit=False,
                        show_reload=False, action=None,
                        action_link_name=None, **options):
         title = title or _('Warning')
