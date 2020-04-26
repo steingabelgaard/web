@@ -24,6 +24,7 @@ odoo.define("web_access_rule_buttons.main", function (require) {
                 var button = this.$buttons.find(".o_form_button_edit");
                 if (button) {
                     button.prop("disabled", !access);
+                    button.prop("hidden", !access);
                 }
             }
         },
