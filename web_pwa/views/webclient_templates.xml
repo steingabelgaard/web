@@ -68,8 +68,8 @@ self.addEventListener('fetch', function(evt) {
 
     <template id="manifest" name="PWA manifest">
 {
-  "name": "<t t-esc="pwa_name"/>",
-  "short_name": "<t t-esc="pwa_short_name"/>",
+  "name": "<t t-raw="pwa_name"/>",
+  "short_name": "<t t-raw="pwa_short_name"/>",
   "icons": [{
     "src": "<t t-esc="icon128x128"/>",
       "sizes": "128x128",
