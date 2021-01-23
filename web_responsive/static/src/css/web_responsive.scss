@@ -616,12 +616,12 @@ html .o_web_client .o_main .o_main_content {
 .o_web_client.o_chatter_position_sided {
     .o_modal_fullscreen.o_document_viewer {
         // On-top of navbar
-        z-index: 10;
+        z-index: 200;  // Changed from 10 to adjust for backend_theme's 100
 
         &.o_responsive_document_viewer {
             /* Show sided viewer on large screens */
             @include media-breakpoint-up(lg) {
-                width: $chatter_zone_width;
+                width: 32%;  // Reduced from 35% to compensate for app sidebar
                 margin-left: auto;
 
                 /* Show/Hide control buttons (next, prev, etc..) */
