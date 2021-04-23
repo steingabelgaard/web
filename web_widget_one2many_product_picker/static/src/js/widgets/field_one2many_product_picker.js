@@ -37,6 +37,7 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
             update_subtotal: "_onUpdateSubtotal",
             load_more: "_onLoadMore",
             loading_records: "_onLoadingRecords",
+            list_record_remove: "_onListRecordRemove",
         }),
 
         _auto_search_delay: 450,
@@ -438,6 +439,7 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
                     discount: "discount",
                 },
                 auto_save: false,
+                ignore_warning: false,
             };
         },
 
@@ -525,7 +527,7 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
                 'name': 'main_lines',
             };
             this._searchContext.domain = this._getLinesDomain();
-            this._searchContext.order = false;
+            this._searchContext.order = [{'name': 'sequence'}, {'name': 'id'}];
             this._searchContext.activeTest = false;
             this.doRenderSearchRecords();
         },
@@ -580,10 +582,82 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
          * @param {CustomEvent} evt
          */
         _onCreateQuickRecord: function (evt) {
+            evt.stopPropagation();
+            var self = this;
             this.parent_controller.model.setPureVirtual(evt.data.id, false);
-            this._setValue({operation: "ADD", id: evt.data.id});
+
             if (this.options.auto_save) {
-                this.parent_controller.saveRecord(undefined, {stayInEdit: true});
+                // Dont trigger state update
+                this._setValue(
+                    {operation: "ADD", id: evt.data.id},
+                    {notifyChange: false}
+                ).then(function () {
+                    self.parent_controller.saveRecord(undefined, {stayInEdit: true}).then(function () {
+                        // Because 'create' generates a new state and we can't know these new id we
+                        // need force update all the current states.
+                        self._setValue(
+                                {operation: "UPDATE", id: evt.data.id},
+                                {doNotSetDirty: true}
+                        ).then(function () {
+                            if (evt.data.callback) {
+                                evt.data.callback();
+                            }
+                        });
+                    });
+                    if (evt.data.callback) {
+                        evt.data.callback();
+                    }
+                });
+            } else {
+                // This is used to know when need use 'yellow' color
+                this.parent_controller.model.updateRecordContext(evt.data.id, {
+                    product_picker_modified: true,
+                });
+                // This will trigger an "state" update
+                this._setValue({operation: "ADD", id: evt.data.id}).then(function () {
+                    if (evt.data.callback) {
+                        evt.data.callback();
+                    }
+                });
+            }
+        },
+
+        _doUpdateQuickRecord: function (id, data, callback) {
+            if (this.options.auto_save) {
+                var self = this;
+                // Dont trigger state update
+                this._setValue(
+                    {operation: "UPDATE", id: id, data: data},
+                    {notifyChange: false}
+                ).then(function () {
+                    self.parent_controller.saveRecord(undefined, {stayInEdit: true}).then(function () {
+                        // Workaround to get updated values
+                        self.parent_controller.model.reload(self.value.id).then(function (result) {
+                            var new_data = self.parent_controller.model.get(result);
+                            self.value.data = new_data.data;
+                            self.renderer.updateState(self.value, {force: true});
+                            if (callback) {
+                                callback();
+                            }
+                        });
+                    });
+                    if (callback) {
+                        callback();
+                    }
+                });
+            } else {
+                // This is used to know when need use 'yellow' color
+                this.parent_controller.model.updateRecordContext(id, {
+                    product_picker_modified: true,
+                });
+                // This will trigger an "state" update
+                this._setValue(
+                    {operation: "UPDATE", id: id, data: data},
+                ).then(function () {
+                    if (callback) {
+                        callback();
+                    }
+                });
             }
         },
 
@@ -594,10 +668,27 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
          * @param {CustomEevent} evt
          */
         _onUpdateQuickRecord: function (evt) {
-            this._setValue({operation: "UPDATE", id: evt.data.id, data: evt.data.data});
-            if (this.options.auto_save) {
-                this.parent_controller.saveRecord(undefined, {stayInEdit: true});
-            }
+            evt.stopPropagation();
+            this._doUpdateQuickRecord(evt.data.id, evt.data.data, evt.data.callback);
+        },
+
+        /**
+         * Handle auto_save when remove a record
+         */
+        _onListRecordRemove: function (evt) {
+            evt.stopPropagation();
+            var self = this;
+            this._setValue({operation: "DELETE", ids: [evt.data.id]}).then(function () {
+                if (self.options.auto_save) {
+                    self.parent_controller.saveRecord(undefined, {stayInEdit: true}).then(function () {
+                        if (evt.data.callback) {
+                            evt.data.callback();
+                        }
+                    });
+                } else if (evt.data.callback) {
+                    evt.data.callback();
+                }
+            });
         },
 
         /**
@@ -656,7 +747,8 @@ odoo.define("web_widget_one2many_product_picker.FieldOne2ManyProductPicker", fun
          *
          * @override
          */
-        _setValue: function () {
+
+        _setValue: function (value, options) {
             var self = this;
             return this._super.apply(this, arguments).then(function () {
                 self.updateBadgeLines();

@@ -44,6 +44,8 @@ Widget options:
   will lose part of its functionality as the document will be saved every time you
   modify/create a record with the widget.
 
+* ignore_warning > Enable/Disable display onchange warnings (False by default)
+
 All widget options are optional.
 Notice that you can call '_' method to use translations. This only can be used with this widget.
 
@@ -134,3 +136,10 @@ Other example for 'purchase.order.line' fields:
             <field name="product_uom" class="mb-2" options="{'no_open': True, 'no_create': True, 'no_edit': True}" />
         </form>
     </field>
+
+
+Boostrap Modifications:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The product picker view container have a custom media queries space adding a new screen size called 'xxl' (>= 1440px) and modifies the columns to have 24 instead of 12.
+This means that you can use "col-xxl-" inside the product picker view container.
