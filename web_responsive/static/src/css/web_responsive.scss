@@ -604,7 +604,6 @@ html .o_web_client .o_main .o_main_content {
     .o_list_view {
         // th & td are here for compatibility with chrome
         thead, thead tr:nth-child(1) th {
-            position: sticky;
             top: 0;
             z-index: 1;
         }
@@ -618,6 +617,9 @@ html .o_web_client .o_main .o_main_content {
         tfoot tr:nth-child(1) td {
             background-color: $o-list-footer-bg-color;
         }
+    }
+    .o_list_view thead {
+        position: sticky;
     }
 }
 
