@@ -45,6 +45,8 @@
     }
 
     .oe_one2many_product_picker_view {
+        @include make-grid-columns($columns: 24, $breakpoints: $one2many-product-picker-grid-breakpoints);
+
         overflow: auto;
 
         > .row {
@@ -210,6 +212,9 @@
                 background-color: hsla(0, 0%, 100%, 0.667);
                 font-size: 0.95rem;
                 z-index: 0;
+            }
+            .add_product, .product_qty, .price_unit {
+                cursor: pointer;
             }
         }
     }

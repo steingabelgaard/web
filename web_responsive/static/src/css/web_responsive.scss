@@ -397,14 +397,17 @@ html .o_web_client .o_main .o_main_content {
         // Support for long title (with ellipsis)
         .oe_title {
             span.o_field_widget {
-                max-width: 100%;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                width: initial;
-            }
-            span:active {
-                white-space: normal;
+                &:not(.oe_inline) {
+                    max-width: 100%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: initial;
+                    
+                    &:active {
+                        white-space: normal;
+                    }
+                }
             }
         }
 
@@ -601,7 +604,6 @@ html .o_web_client .o_main .o_main_content {
     .o_list_view {
         // th & td are here for compatibility with chrome
         thead, thead tr:nth-child(1) th {
-            position: sticky;
             top: 0;
             z-index: 1;
         }
@@ -616,6 +618,9 @@ html .o_web_client .o_main .o_main_content {
             background-color: $o-list-footer-bg-color;
         }
     }
+    .o_list_view thead {
+        position: sticky;
+    }
 }
 
 // Big checkboxes
@@ -628,7 +633,7 @@ html .o_web_client .o_main .o_main_content {
             }
         }
     }
-    .o_data_cell {
+    .o_data_cell:not(.o_boolean_toggle_cell) {
         .custom-checkbox .custom-control-label {
             top: -6px;
         }
