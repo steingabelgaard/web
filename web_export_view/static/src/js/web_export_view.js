@@ -83,8 +83,9 @@ odoo.define('web_export_view', function (require) {
                             var $cellcheckbox = $cell.find(
                                 '.o_checkbox input:checkbox');
                             if ($cellcheckbox.length) {
-                                $cellcheckbox.is(":checked")
-                                        ? _t("X") : _t("")
+                                export_row.push(
+                                	$cellcheckbox.is(":checked")	
+                                    	? _t("X") : _t("")
                                 );
                             } else {
                                 var text = $cell.text().trim();
