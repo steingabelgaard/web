@@ -9,10 +9,13 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-web_action_conditionable',
+        'odoo12-addon-web_advanced_filter',
         'odoo12-addon-web_advanced_search',
         'odoo12-addon-web_advanced_search_wildcard',
+        'odoo12-addon-web_button_no_save',
         'odoo12-addon-web_calendar_slot_duration',
         'odoo12-addon-web_company_color',
+        'odoo12-addon-web_dashboard_tile',
         'odoo12-addon-web_decimal_numpad_dot',
         'odoo12-addon-web_dialog_size',
         'odoo12-addon-web_disable_browser_autocomplete',
@@ -40,6 +43,7 @@ setuptools.setup(
         'odoo12-addon-web_pwa_oca',
         'odoo12-addon-web_refresher',
         'odoo12-addon-web_responsive',
+        'odoo12-addon-web_responsive_company',
         'odoo12-addon-web_search_with_and',
         'odoo12-addon-web_searchbar_full_width',
         'odoo12-addon-web_send_message_popup',
@@ -76,6 +80,7 @@ setuptools.setup(
         'odoo12-addon-web_widget_numeric_step',
         'odoo12-addon-web_widget_one2many_product_picker',
         'odoo12-addon-web_widget_one2many_product_picker_sale_stock',
+        'odoo12-addon-web_widget_one2many_product_picker_sale_stock_available_info_popup',
         'odoo12-addon-web_widget_open_tab',
         'odoo12-addon-web_widget_plotly_chart',
         'odoo12-addon-web_widget_timepicker',
@@ -87,5 +92,6 @@ setuptools.setup(
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Odoo',
+        'Framework :: Odoo :: 12.0',
     ]
 )
